@@ -8,6 +8,14 @@
     background-color: #111111;
 }
 
+#container {
+  background-color: #111111;
+  animation-name: fadeIn;
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
 #login-box{
     width: 500px;
     padding: 40px;
@@ -22,7 +30,7 @@
   #login-box h1{
     color: rgb(216, 216, 216);
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 200;
     background-color: #191919;
   }
 
@@ -59,7 +67,7 @@
     outline: none;
     color: white;
     border-radius: 24px;
-    transition: 0.25s;
+    transition: 0.5s;
     cursor: pointer;
   }
 
@@ -68,5 +76,75 @@
   }
 
   #login-box input[type = "submit"]:hover {
-      color: #191919;
+      color: #111111;
+  }
+
+  #subtext {
+    margin-top: 68vh;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.3;
+  }
+
+  #main h1 {
+    text-align: center;
+    font-weight: 100;
+    font-size: 42px;
+    margin-top: 14vh;
+    color: #FFF;
+  }
+  
+  #form-layout {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: 10% auto 20%;;
+  }
+
+  form {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+    background: #191919;
+  }
+
+  form input[type = "text"] {
+    border:0;
+    background: none;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2d2d2d;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.5s;
+  }
+
+  form input[type = "text"]:focus {
+    width: 280px;
+    border-color: rgb(216, 216, 216);
+  }
+
+  form input[type = "submit"]{
+    border:0;
+    background: none;
+    margin: 15px auto;
+    text-align: center;
+    border: 2px solid rgb(216, 216, 216);
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  form input[type = "submit"]:hover{
+    background: rgb(216, 216, 216);
+  }
+
+  form input[type = "submit"]:hover {
+      color: #111111;
   }

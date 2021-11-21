@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&family=Zen+Kaku+Gothic+Antique:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: #111111;
+}
+
+#particles-js{
+    display: flex;
+    width: auto;
+    height: auto;
+    background-color: #111111;
+    background: no-repeat center center /cover;
+  }
+
+#nav {
+    margin-top: 3vh;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+#nav h1 {
+    padding-top: 20px;
+    font-size: 50px;
+    color: #FFF;
+    font-weight: 200;
+    animation-name: fadeIn;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+#main p {
+    padding: 15px;
+    color: #FFF;
+    font-size: 42px;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 15vh;
+}
+
+.opt {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.opt p {
+    color: #FFF;
+    text-align: center;
+    align-items: center;
+    margin-top: 10vh;
+    font-size: 25px;
+    font-weight: 200;
+}
+

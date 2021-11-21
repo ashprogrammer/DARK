@@ -8,8 +8,15 @@
     background-color: #111111;
 }
 
-#container {
+#particles-js{
+  display: flex;
+	width: auto;
+	height: auto;
   background-color: #111111;
+	background: no-repeat center center /cover;
+}
+
+#container {
   animation-name: fadeIn;
   animation-delay: 0s;
   animation-duration: 1s;
@@ -80,7 +87,9 @@
   }
 
   #subtext {
+    position: absolute;
     margin-top: 68vh;
+    margin-left: 46vw;
     color: #FFFFFF;
     text-align: center;
     font-size: 12px;

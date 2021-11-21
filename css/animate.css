@@ -1,8 +1,18 @@
 @keyframes fadeIn {
-    0% {
+    from {
         opacity: 0;
     }
-    100% {
+    to {
         opacity: 1;
     }
 }
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #BEBEBE, 0 0 30px #A9A9A9, 0 0 40px #A0A0A0, 0 0 40px #909090, 0 0 50px #808080;
+    }
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 20px #BEBEBE, 0 0 30px #A9A9A9, 0 0 40px #A0A0A0, 0 0 50px #909090, 0 0 50px #808080, 0 0 60px #C0C0C0;
+    }
+  }
+

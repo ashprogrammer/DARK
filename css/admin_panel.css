@@ -5,16 +5,22 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+}
+
+body {
     background-color: #111111;
 }
 
-#particles-js{
-    display: flex;
-    width: auto;
-    height: auto;
-    background-color: #111111;
-    background: no-repeat center center /cover;
-  }
+#blur {
+    transition: 0.5s;
+}
+
+#blur.active {
+    filter: blur(40px);
+    pointer-events: none;
+    user-select: none;
+    transition: 0.5s;
+}
 
 #nav {
     margin-top: 3vh;
@@ -41,7 +47,9 @@
     font-size: 42px;
     font-weight: 200;
     text-align: center;
-    margin-top: 15vh;
+    margin-top: 16vh;
+    animation-duration: 0.5s;
+    animation-name: fadeIn;
 }
 
 .opt {
@@ -53,8 +61,114 @@
     color: #FFF;
     text-align: center;
     align-items: center;
-    margin-top: 10vh;
+    margin-top: 12vh;
     font-size: 25px;
     font-weight: 200;
+    animation-duration: 0.5s;
+    animation-name: scaleGlowOut;
 }
 
+.opt p a {
+    text-decoration: none;
+}
+
+.opt p a:visited {
+    color: #FFF;
+}
+
+
+.opt p a:active {
+    color: #FFF;
+}
+
+.opt p:hover {
+    font-size: 36px;
+    animation-name: scaleGlowIn;
+    animation-delay: 0;
+    animation-duration: 0.5s; 
+    animation-timing-function: ease-out;
+    animation-fill-mode:forwards;
+}
+
+#popup{
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #191919;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+#popup.active {
+      top: 50%;
+      visibility: visible;
+      opacity: 1;
+      transition: 0.5s;
+  }
+
+#popup h2{
+    color: rgb(216, 216, 216);
+    text-transform: uppercase;
+    font-weight: 200;
+    background-color: #191919;
+  }
+
+#popup input[type = "text"] {
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2d2d2d;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+  }
+
+#popup input[type = "text"]:focus {
+    width: 280px;
+    border-color: rgb(216, 216, 216);
+  }
+
+#popup input[type = "submit"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid rgb(216, 216, 216);
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+#popup input[type = "submit"]:hover{
+    background: rgb(216, 216, 216);
+  }
+
+#popup input[type = "submit"]:hover {
+    color: #111111;
+  }
+
+#popup a {
+    color: rgb(216, 216, 216);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.5s;
+  }
+
+#popup a:hover {
+    font-size: 20px;
+    transition: 0.5s;
+  }

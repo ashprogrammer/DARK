@@ -16,3 +16,33 @@
     }
   }
 
+  @keyframes smallGlow {
+    from {
+      text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 5px #BEBEBE, 0 0 7px #A9A9A9, 0 0 10px #A0A0A0, 0 0 13px #909090, 0 0 15px #808080;
+    }
+    to {
+      text-shadow: 0 0 3px #fff, 0 0 5px #BEBEBE, 0 0 7px #A9A9A9, 0 0 10px #A0A0A0, 0 0 13px #909090, 0 0 15px #808080, 0 0 20px #C0C0C0;
+    }
+  }
+
+  @keyframes scaleGlowIn {
+    from {
+      font-size: 25px;
+      text-shadow: 0 0 5px #FFF;
+    }
+    to {
+      font-size: 36px;
+      text-shadow: 0 0 10px #fff, 0 0 20px #BEBEBE, 0 0 30px #A9A9A9, 0 0 40px #A0A0A0, 0 0 50px #909090, 0 0 50px #808080, 0 0 60px #C0C0C0;
+    }
+  }
+
+  @keyframes scaleGlowOut {
+    from {
+      font-size: 36px;
+      text-shadow: 0 0 10px #fff, 0 0 20px #BEBEBE, 0 0 30px #A9A9A9, 0 0 40px #A0A0A0, 0 0 50px #909090, 0 0 50px #808080, 0 0 60px #C0C0C0;
+    }
+    to {
+      font-size: 25px;
+      text-shadow: 0 0 5px #FFF;
+    }
+  }

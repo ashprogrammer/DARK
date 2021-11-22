@@ -9,22 +9,31 @@
     <title>Admin Managment</title>
 </head>
 <body>
-    <div id="particle-js">
-        
-        <nav id="nav"> 
-            <h1>DARK</h1>
-        </nav>
-        <main id="main">
-            <p>Choose 1 option</p>
-        </main>
-        <div class="opt">
-            <p><a href="">Persons</a></p>
-            <p><a href="">Events</a></p>
-            <p><a href="">Years</a></p>
-            <p><a href="">Seasons</a></p>
+        <div id="blur">
+            <nav id="nav"> 
+                <h1>DARK</h1>
+            </nav>
+            <main id="main">
+                <p>Choose 1 option</p>
+            </main>
+            <div class="opt">
+                <p><a href="#" onclick="toggle()">Persons</a></p>
+                <p><a href="#" onclick="toggle()">Events</a></p>
+                <p><a href="#" onclick="toggle()">Years</a></p>
+                <p><a href="#" onclick="toggle()">Seasons</a></p>
+            </div>
         </div>
-    </div>
-    <script src="../js/particles.js"></script>
-    <script src="../js/app.js"></script>
+            <div id="popup">
+                <h2>Persons</h2>
+                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="lastname" placeholder="Lastname">
+                <input type="text" name="age" placeholder="Age">
+                <input type="text" name="photo" placeholder="Upload a photo">
+                <input type="submit" name="insert" value="INSERT">
+                <a href="#" onclick="toggle()">Close</a>
+            </div>
+    <script src="../js/admin.js">
+        toggle();
+    </script>
 </body>
 </html>

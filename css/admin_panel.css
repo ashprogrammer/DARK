@@ -16,7 +16,7 @@ body {
 }
 
 #blur.active {
-    filter: blur(40px);
+    filter: blur(30px);
     pointer-events: none;
     user-select: none;
     transition: 0.5s;
@@ -37,8 +37,53 @@ body {
     font-weight: 200;
     animation-name: fadeIn;
     animation-delay: 0s;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-timing-function: ease-out;
+}
+
+.delay {
+  opacity: 0;
+  animation-name: slideUp;
+  animation-delay: 2s;
+  animation-duration: 3s; 
+  animation-timing-function: ease-out;
+  animation-fill-mode:forwards;
+}
+
+#personDelay {
+  opacity: 0;
+  animation-name: slideUp;
+  animation-delay: 0.5s;
+  animation-duration: 2s; 
+  animation-timing-function: ease-out;
+  animation-fill-mode:forwards;
+}
+
+#eventsDelay {
+  opacity: 0;
+  animation-name: slideUp;
+  animation-delay: 0.8s;
+  animation-duration: 2s; 
+  animation-timing-function: ease-out;
+  animation-fill-mode:forwards;
+}
+
+#yearsDelay {
+  opacity: 0;
+  animation-name: slideUp;
+  animation-delay: 1.1s;
+  animation-duration: 2s; 
+  animation-timing-function: ease-out;
+  animation-fill-mode:forwards;
+}
+
+#seasonDelay {
+  opacity: 0;
+  animation-name: slideUp;
+  animation-delay: 1.4s;
+  animation-duration: 2s; 
+  animation-timing-function: ease-out;
+  animation-fill-mode:forwards;
 }
 
 #main p {
@@ -48,8 +93,17 @@ body {
     font-weight: 200;
     text-align: center;
     margin-top: 16vh;
+    animation-name: scaleOut;
     animation-duration: 0.5s;
-    animation-name: fadeIn;
+}
+
+#main p:hover {
+  animation-name: scaleIn;
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  cursor: pointer;
 }
 
 .opt {
@@ -57,11 +111,26 @@ body {
     grid-template-columns: auto auto auto auto;
 }
 
+.desc {
+  color: #FFF;
+  text-align: center;
+  opacity: 0;
+  margin: 20px;
+  font-size: 13px;
+  margin-top: 14vh;
+  animation-name: fadeInDesc;
+  animation-delay: 0.5s;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  animation-fill-mode:forwards;
+}
+
 .opt p {
     color: #FFF;
     text-align: center;
     align-items: center;
-    margin-top: 12vh;
+    margin-top: 13vh;
     font-size: 25px;
     font-weight: 200;
     animation-duration: 0.5s;
@@ -76,6 +145,9 @@ body {
     color: #FFF;
 }
 
+.opt p a:link {
+  color: #FFF;
+}
 
 .opt p a:active {
     color: #FFF;
@@ -90,7 +162,7 @@ body {
     animation-fill-mode:forwards;
 }
 
-#popup{
+#popup, #popupPersons, #popupEvents, #popupYears, #popupSeasons{
     width: 500px;
     padding: 40px;
     position: absolute;
@@ -104,21 +176,21 @@ body {
     transition: 0.5s;
   }
 
-#popup.active {
+#popup.active, #popupPersons.active, #popupEvents.active, #popupSeasons.active, #popupYears.active {
       top: 50%;
       visibility: visible;
       opacity: 1;
       transition: 0.5s;
   }
 
-#popup h2{
+  #popup h2, #popupPersons h2, #popupEvents h2, #popupYears h2, #popupSeasons h2{
     color: rgb(216, 216, 216);
     text-transform: uppercase;
     font-weight: 200;
     background-color: #191919;
   }
 
-#popup input[type = "text"] {
+#popup input[type = "text"], #popupPersons input[type = "text"], #popupEvents input[type = "text"], #popupYears input[type = "text"], #popupSeasons input[type = "text"] {
     border:0;
     background: none;
     display: block;
@@ -133,12 +205,12 @@ body {
     transition: 0.25s;
   }
 
-#popup input[type = "text"]:focus {
+#popup input[type = "text"]:focus, #popupPersons input[type = "text"]:focus, #popupEvents input[type = "text"]:focus, #popupYears input[type = "text"]:focus, #popupSeasons input[type = "text"]:focus {
     width: 280px;
     border-color: rgb(216, 216, 216);
   }
 
-#popup input[type = "submit"]{
+#popup input[type = "submit"], #popupPersons input[type = "submit"], #popupEvents input[type = "submit"], #popupYears input[type = "submit"], #popupSeasons input[type = "submit"]{
     border:0;
     background: none;
     display: block;
@@ -153,15 +225,15 @@ body {
     cursor: pointer;
   }
 
-#popup input[type = "submit"]:hover{
+#popup input[type = "submit"]:hover, #popupPersons input[type = "submit"]:hover, #popupEvents input[type = "submit"]:hover, #popupYears input[type = "submit"]:hover, #popupSeasons input[type = "submit"]:hover{
     background: rgb(216, 216, 216);
   }
 
-#popup input[type = "submit"]:hover {
+#popup input[type = "submit"]:hover, #popupPersons input[type = "submit"]:hover, #popupEvents input[type = "submit"]:hover, #popupYears input[type = "submit"]:hover, #popupSeasons input[type = "submit"]:hover {
     color: #111111;
   }
 
-#popup a {
+#popup a, #popupPersons a, #popupEvents a, #popupYears a, #popupSeasons a {
     color: rgb(216, 216, 216);
     text-decoration: none;
     font-size: 14px;

@@ -20,20 +20,20 @@ var pJS = function(tag_id, params){
     },
     particles: {
       number: {
-        value: 400,
+        value: 100,
         density: {
           enable: true,
-          value_area: 800
+          value_area: 100
         }
       },
       color: {
-        value: '#fff'
+        value: '#A9A9A9'
       },
       shape: {
         type: 'circle',
         stroke: {
           width: 0,
-          color: '#ff0000'
+          color: '#383838'
         },
         polygon: {
           nb_sides: 5
@@ -73,7 +73,7 @@ var pJS = function(tag_id, params){
       },
       move: {
         enable: true,
-        speed: 2,
+        speed: 0.1,
         direction: 'none',
         random: false,
         straight: false,

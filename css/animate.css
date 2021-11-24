@@ -7,21 +7,22 @@
     }
 }
 
+@keyframes fadeInDesc {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 0.3;
+  }
+}
+
+
 @keyframes glow {
     from {
       text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #BEBEBE, 0 0 30px #A9A9A9, 0 0 40px #A0A0A0, 0 0 40px #909090, 0 0 50px #808080;
     }
     to {
       text-shadow: 0 0 10px #fff, 0 0 20px #BEBEBE, 0 0 30px #A9A9A9, 0 0 40px #A0A0A0, 0 0 50px #909090, 0 0 50px #808080, 0 0 60px #C0C0C0;
-    }
-  }
-
-  @keyframes smallGlow {
-    from {
-      text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 5px #BEBEBE, 0 0 7px #A9A9A9, 0 0 10px #A0A0A0, 0 0 13px #909090, 0 0 15px #808080;
-    }
-    to {
-      text-shadow: 0 0 3px #fff, 0 0 5px #BEBEBE, 0 0 7px #A9A9A9, 0 0 10px #A0A0A0, 0 0 13px #909090, 0 0 15px #808080, 0 0 20px #C0C0C0;
     }
   }
 
@@ -45,4 +46,95 @@
       font-size: 25px;
       text-shadow: 0 0 5px #FFF;
     }
+  }
+
+  @keyframes scaleInP {
+    from {
+      font-size: 15px;
+    }
+    to {
+      font-size: 30px;
+    }
+  }
+
+  @keyframes scaleOutP {
+    from {
+      font-size: 30px;
+    }
+    to {
+      font-size: 15px;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      margin-top: 60vh;
+    }
+    to {
+      opacity: 1;
+      margin-top: 12vh;
+    }
+  }
+
+  @keyframes scaleOut {
+    from {
+      font-size: 50px;
+    }
+    to {
+      font-size: 42px;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      font-size: 42px;
+    }
+    to {
+      font-size: 50px;
+    }
+  }
+
+  @keyframes scaleImgIn {
+    from {
+      width: 50px;
+      height: 50px;
+    }
+    to {
+      width: 55px;
+      height: 55px;
+      transform: rotate(-120deg);
+    }
+  }
+
+  @keyframes scaleImgOut {
+    from {
+      width: 55px;
+      height: 55px;
+      transform: rotate(-120deg);
+    }
+    to {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  @keyframes menuOptIn {
+    from {
+      font-size: 25px;
+    }
+    to {
+      font-size: 30px;
+      font-weight: 300;
+    }
+  }
+
+  @keyframes menuOptOut {
+    from {
+      font-size: 30px;
+      font-weight: 300;
+     }
+    to {
+      font-size: 25px;
+     }
   }

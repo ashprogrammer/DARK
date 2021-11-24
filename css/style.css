@@ -7,3 +7,129 @@
     font-family: 'Roboto', sans-serif;
     background-color: #111111;
 }
+
+#navbar {
+  width: 100%;
+  height: 70px;
+}
+
+#menu-img {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  animation-name: scaleImgOut;
+  animation-delay: 0s;
+  animation-duration: 0.3s; 
+  animation-timing-function: ease-out;
+  animation-fill-mode:forwards;
+}
+
+#menu-img:hover {
+  animation-name: scaleImgIn;
+  animation-delay: 0s;
+  animation-duration: 0.3s; 
+  animation-timing-function: ease-out;
+  animation-fill-mode:forwards;
+}
+
+.menu-opt {
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.menu-btn {
+  float: right;
+  display: flex;
+  height: 70px;
+  cursor: pointer;
+}
+
+.menu {
+  width: 50%;
+  height: 100vh;
+  background-color: #FFF;
+  padding: 50px;
+  transform: translateX(-500px);
+  transition: 0.5s;
+}
+
+.menu li {
+  background-color: #FFF;
+  list-style-type: none;
+  border-bottom: 1px solid #222222;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.showmenu {
+  transform: translateX(0px);
+}
+
+.menu li:nth-last-child(2){
+  border-bottom: none;
+}
+
+span {
+  display: inline-block;
+}
+
+.menu h2, .reverse-letter {
+  padding: 40px 0;
+  font-size: 45px;
+  font-weight: 200;
+  text-align: center;
+  background-color: #FFF;
+}
+
+.reverse-letter {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+.menu p {
+  position: fixed;
+  text-align: center;
+  font-size: 14px;
+  background-color: #FFF;
+  margin-bottom: 15px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.menu li a {
+  color: #222222;
+  text-decoration: none;
+  font-size: 25px;
+  background-color: #FFF;
+  animation-name: menuOptOut;
+  animation-delay: 0s;
+  animation-duration: 0.3s; 
+  animation-timing-function: ease-out;
+  animation-fill-mode:forwards;
+}
+
+.menu li a:hover {
+  animation-name: menuOptIn;
+  animation-delay: 0s;
+  animation-duration: 0.3s; 
+  animation-timing-function: ease-out;
+  animation-fill-mode:forwards;
+}
+
+@media screen and (min-width:1000px) {
+  .menu {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .menu li a {
+    font-size: 18px;
+  }
+}
+

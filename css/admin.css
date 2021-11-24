@@ -91,7 +91,7 @@ body {
   }
 
   #subtext {
-    position: absolute;
+    position: fixed;
     margin-top: 68vh;
     margin-left: 46vw;
     color: #FFFFFF;

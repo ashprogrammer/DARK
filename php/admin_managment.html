@@ -32,8 +32,8 @@
                 <input type="text" name="name" placeholder="Name">
                 <input type="text" name="lastname" placeholder="Lastname">
                 <input type="text" name="age" placeholder="Age">
-                <input type="text" name="photo" placeholder="Upload a photo">
-                <input type="submit" name="insert" value="INSERT">
+                <input type="file" name="photo">
+                <input type="submit" name="insert" id="photo" value="INSERT">
                 <a href="#" onclick="togglePersons()">Close</a>
             </div>
             <div id="popupEvents">
@@ -63,5 +63,8 @@
         toggleYears();
         toggleSeasons();
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </body>
 </html>
+
+<!-- https://youtu.be/a1KqwbQjIWk -->

@@ -40,7 +40,7 @@
 
 .menu-btn {
   float: right;
-  display: flex;
+  margin-right: 47%;
   height: 70px;
   cursor: pointer;
 }
@@ -133,3 +133,29 @@ span {
   }
 }
 
+#content {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 10% 30%;
+}
+
+#season1 {
+  width: 230px;
+  height: 400px;
+  margin: 0 auto;
+  background: url(../img/dark_s1.jpg) no-repeat;
+}
+
+#season2 {
+  width: 230px;
+  height: 400px;
+  margin: 0 auto;
+  background: url(../img/dark_s2.jpg) no-repeat;
+}
+
+#season3 {
+  width: 230px;
+  height: 400px;
+  margin: 0 auto;
+  background: url(../img/dark_s3.jpg) no-repeat;
+}

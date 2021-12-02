@@ -103,7 +103,7 @@ body {
   animation-duration: 0.5s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
-  cursor: pointer;
+  cursor: default;
 }
 
 .opt {
@@ -190,7 +190,8 @@ body {
     background-color: #191919;
   }
 
-#popup input[type = "text"], #popupPersons input[type = "text"], #popupEvents input[type = "text"], #popupYears input[type = "text"], #popupSeasons input[type = "text"] {
+#popup input[type = "text"], #popupPersons input[type = "text"], #popupEvents input[type = "text"], 
+#popupYears input[type = "text"], #popupSeasons input[type = "text"] {
     border:0;
     background: none;
     display: block;
@@ -205,7 +206,9 @@ body {
     transition: 0.25s;
   }
 
-#popup input[type = "text"]:focus, #popupPersons input[type = "text"]:focus, #popupEvents input[type = "text"]:focus, #popupYears input[type = "text"]:focus, #popupSeasons input[type = "text"]:focus {
+#popup input[type = "text"]:focus, #popupPersons input[type = "text"]:focus, 
+#popupEvents input[type = "text"]:focus, #popupYears input[type = "text"]:focus, 
+#popupSeasons input[type = "text"]:focus {
     width: 280px;
     border-color: rgb(216, 216, 216);
   }

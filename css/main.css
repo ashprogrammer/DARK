@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: #111111;
+}
+
+#title h2 {
+    margin-top: 2%;
+    margin-bottom: 3%;
+    color: #FFF; 
+    text-align: center;
+    font-size: 50px;
+    font-weight: 200;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+#main {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin: 0 10%;
+}
+
+.div1 {
+    margin: 0 auto;
+    width: 175px;
+    height: 250px;
+    background-color: #FFF;
+    margin-bottom: 35px;
+}

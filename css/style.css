@@ -144,6 +144,8 @@ span {
   height: 400px;
   margin: 0 auto;
   background: url(../img/dark_s1.jpg) no-repeat;
+  cursor: pointer;
+  opacity: 0.6;
 }
 
 #season2 {
@@ -151,6 +153,8 @@ span {
   height: 400px;
   margin: 0 auto;
   background: url(../img/dark_s2.jpg) no-repeat;
+  cursor: pointer;
+  opacity: 0.6;
 }
 
 #season3 {
@@ -158,4 +162,16 @@ span {
   height: 400px;
   margin: 0 auto;
   background: url(../img/dark_s3.jpg) no-repeat;
+  cursor: pointer;
+  opacity: 0.6;
 }
+
+.season_title {
+  text-align: center;
+  color: #FFF;
+  transition: 0.5s;
+  font-size: 30px;
+  font-weight: 200;
+  opacity: 0;
+}
+

@@ -60,6 +60,7 @@
                 <input type="submit" name="insert" value="INSERT">
                 <a href="#" onclick="toggleSeasons()">Close</a>
             </div>
+    <!-- JS -->
     <script src="../js/admin.js">
         togglePersons();
         toggleEvents();
@@ -69,3 +70,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </body>
 </html>
+
+<?php
+
+?>

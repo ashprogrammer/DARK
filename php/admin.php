@@ -15,7 +15,7 @@
                 <form id="login-box" action="" method="post">
                     <h1>DARK</h1>
                     <input type="text" name="username" placeholder="Username">
-                    <input type="password" name="passw" placeholder="Password">
+                    <input type="password" name="pass" placeholder="Password">
                     <input type="submit" name="login" value="Login">
                 </form> 
                 <p id="subtext">SIC MUNDUS CREATUS EST</p>
@@ -28,28 +28,32 @@
 <!-- PHP -->
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $db = mysqli_connect('localhost', 'root', '', 'dark');
-    $login = $_POST['username'];
-    $pass = $_POST['pass'];
-    $submit = $_POST['login'];
-    $error = "";
-    $login_sql = "SELECT login, pass FROM 'admin'; ";
-    $result = mysqli_query($db, $login_sql);
-    if(isset($submit)) {
-        if($login == $result['login']) {
-            if($pass == $result['pass']) {
-                $error = "";
-                header('Location: ./admin_managment.php');
+        $db = mysqli_connect('localhost', 'root', '', 'dark');
+        $login = $_POST['username'];
+        $pass = $_POST['pass'];
+        $submit = $_POST['login'];
+        $error = "";
+        $login_sql = "SELECT login, pass FROM `admin` WHERE login = '$login' ";
+        $result = mysqli_query($db, $login_sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+            if(isset($submit)) {
+                if($login == $row['login']) {
+                    if($pass == $row['pass']) {
+                        $error = "";    
+                        header('Location: ./admin_managment.php');
+                    }
+                    else {
+                        $error = "Invalid password or login";
+                    } 
+                }
+                else {
+                    $error = "Invalid password or login";
+                }
             }
-            else {
-                $error = "Invalid password";
-            } 
         }
-        else {
-            $error = "Invalid login";
-        }
-    }
 }
+mysqli_close($db);
+echo $error;
 ?>
 
-INSERT INTO `person`(`name`, `lastname`, `age`, `photo`, `photo_alt`, `id_admin`) VALUES ('Martha', 'Nielsen', '69', '../img/Persons/martha2003.jpg', 'Martha Nielsen 2020', '1');
+<!-- INSERT INTO `person`(`name`, `lastname`, `age`, `photo`, `photo_alt`, `id_admin`) VALUES ('Martha', 'Nielsen', '69', '../img/Persons/martha2003.jpg', 'Martha Nielsen 2020', '1'); -->

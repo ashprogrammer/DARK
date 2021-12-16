@@ -67,10 +67,12 @@
         toggleYears();
         toggleSeasons();
     </script>
+    <script src="../js/particles.js"></script>
+    <script src="../js/app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </body>
 </html>
-
+<!-- PHP -->
 <?php
-
+    
 ?>

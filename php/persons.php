@@ -33,8 +33,22 @@
     </div>
     <!-- MAIN -->
     <div id="main">
-        <div class="div1">
-            <img src="../img/Persons/aleksander1966.jpg" alt="aleksander">
+        <!-- PHP -->
+        <?php 
+            $db = mysqli_connect('localhost', 'root', '', 'dark');
+            $sql = "SELECT p.Name, p.lastname, p.photo, y.year_s FROM connect_table ct 
+                JOIN person p ON ct.id_person = p.id_person
+                JOIN year_season y ON ct.id_year = y.id_year
+                WHERE y.id_year = '1' ";
+            $result = mysqli_query($db, $sql);
+                while($row = mysqli_fetch_assoc($result)) {
+                    echo "<div class='persons'>
+                    <img src= '". $row['photo']. "'>
+                    </div>";
+                }
+            mysqli_close($db);
+        ?>
+        <!-- <div class="div1">
         </div>
         <div class="div1">
         </div>
@@ -45,8 +59,6 @@
         <div class="div1">
         </div>
         <div class="div1">
-        </div>
-        <div class="div1">
         </div><div class="div1">
         </div><div class="div1">
         </div><div class="div1">
@@ -55,7 +67,7 @@
         </div><div class="div1">
         </div><div class="div1">
         </div><div class="div1">
-        </div>
+        </div> -->
     </div>
     <!-- FOOTER -->
     <footer id="foot">

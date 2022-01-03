@@ -42,32 +42,29 @@
                 WHERE y.id_year = '1' ";
             $result = mysqli_query($db, $sql);
                 while($row = mysqli_fetch_assoc($result)) {
-                    echo "<div class='persons'>
-                    <img src= '". $row['photo']. "'>
-                    </div>";
+                    echo ' <div id = "wrapper">
+                    <a href="#modalbox"><img src= '.$row['photo'].' alt="Bernd" class="img"></a>
+                </div>
+                <div id="modalbox" class="modal">
+                    <div class="modalcontent">
+                        <h1>'.$row['Name'].' '.$row['lastname'].'</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus asperiores magnam temporibus repellat aliquid, incidunt dolores ratione dolor consequuntur aut?</p>
+                        <a href="#" class="modalclose">&times;</a>
+                    </div>
+                </div>';
                 }
             mysqli_close($db);
         ?>
-        <!-- <div class="div1">
+       <!-- <div id = "wrapper">
+        <a href="#modalbox"><img src="../img/Persons/bernd1913.jpg" alt="Bernd" class="img"></a>
+    </div>
+    <div id="modalbox" class="modal">
+        <div class="modalcontent">
+            <h1>Name Person</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus asperiores magnam temporibus repellat aliquid, incidunt dolores ratione dolor consequuntur aut?</p>
+            <a href="#" class="modalclose">&times;</a>
         </div>
-        <div class="div1">
-        </div>
-        <div class="div1">
-        </div>
-        <div class="div1">
-        </div>
-        <div class="div1">
-        </div>
-        <div class="div1">
-        </div><div class="div1">
-        </div><div class="div1">
-        </div><div class="div1">
-        </div><div class="div1">
-        </div><div class="div1">
-        </div><div class="div1">
-        </div><div class="div1">
-        </div><div class="div1">
-        </div> -->
+    </div> -->
     </div>
     <!-- FOOTER -->
     <footer id="foot">

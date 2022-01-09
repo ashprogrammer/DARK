@@ -125,14 +125,12 @@
     }
     to {
       font-size: 30px;
-      font-weight: 300;
     }
   }
 
   @keyframes menuOptOut {
     from {
       font-size: 30px;
-      font-weight: 300;
      }
     to {
       font-size: 25px;

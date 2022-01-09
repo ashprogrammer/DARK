@@ -36,6 +36,7 @@
   flex-direction: row;
   align-items: center;
   text-align: center;
+  font-weight: 200;
 }
 
 .menu-btn {
@@ -52,6 +53,7 @@
   padding: 50px;
   transform: translateX(-500px);
   transition: 0.5s;
+  z-index: 1000;
 }
 
 .menu li {
@@ -106,6 +108,7 @@ span {
   text-decoration: none;
   font-size: 25px;
   background-color: #FFF;
+  font-weight: 200;
   animation-name: menuOptOut;
   animation-delay: 0s;
   animation-duration: 0.3s; 
@@ -167,11 +170,21 @@ span {
 }
 
 .season_title {
+  filter: grayscale(50%);
+  transition: all 0.5s;
+}
+
+.season_title:hover {
+  filter: grayscale(0%);
+  transition: all 0.5s;
+}
+
+/* .season_title {
   text-align: center;
   color: #FFF;
   transition: 0.5s;
   font-size: 30px;
   font-weight: 200;
   opacity: 0;
-}
+} */
 

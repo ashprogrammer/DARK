@@ -34,6 +34,7 @@
                 <input type="text" name="name" placeholder="Name">
                 <input type="text" name="lastname" placeholder="Lastname">
                 <input type="text" name="age" placeholder="Age">
+                <input type="text" name="desc" placeholder="Description">
                 <input type="text" name="photo" placeholder="Upload photo">
                 <input type="submit" name="insert" value="INSERT">
                 <a href="#" onclick="togglePersons()">Close</a>

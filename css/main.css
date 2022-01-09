@@ -29,6 +29,14 @@
     width: 250px;
     height: 130px;
     margin-bottom: 35px;
+    filter: grayscale(100%);
+    transition: all 0.5s;
+    z-index: -1000;
+}
+
+img:hover {
+    filter: grayscale(0%);
+    transition: all 0.5s;
 }
 
 .modal {
@@ -71,6 +79,7 @@ a {
     right: 15px;
     color: #585858;
     text-decoration: none;
+    background-color: #FFF;
 }
 
 h1 {

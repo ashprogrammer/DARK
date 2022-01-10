@@ -11,11 +11,12 @@ body {
     background-color: #111111;
 }
 
-
+/* BLUR */
 #blur {
     transition: 0.5s;
 }
 
+/* BLUR ACTIVE JAVASCRIPT */
 #blur.active {
     filter: blur(30px);
     pointer-events: none;
@@ -23,6 +24,7 @@ body {
     transition: 0.5s;
 }
 
+/* NAVBAR */
 #nav {
     margin-top: 3vh;
     text-align: center;
@@ -42,6 +44,7 @@ body {
     animation-timing-function: ease-out;
 }
 
+/* ANIMATIONS DELAY */
 .delay {
   opacity: 0;
   animation-name: slideUp;
@@ -107,6 +110,7 @@ body {
   cursor: default;
 }
 
+/* GRID LAYOUT */
 .opt {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -163,6 +167,7 @@ body {
     animation-fill-mode:forwards;
 }
 
+/* POPUP CSS */
 #popup, #popupPersons, #popupEvents, #popupYears, #popupSeasons{
     width: 500px;
     padding: 40px;

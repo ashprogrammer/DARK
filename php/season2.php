@@ -36,14 +36,18 @@
     <div id="main">
         <!-- PHP -->
         <?php 
+            // CONNECT TO DATABASE
             $db = mysqli_connect('localhost', 'root', '', 'dark');
+             // QUERY SELECT
             $sql = "SELECT p.Name, p.lastname, p.photo, p.description, p.photo_alt, y.year_s FROM connect_table ct 
                 JOIN person p ON ct.id_person = p.id_person
                 JOIN year_season y ON ct.id_year = y.id_year
                 JOIN season s ON ct.id_season = s.id_season
                 WHERE s.id_season = '3' ";
+                // RESULT OF QUERY
                 $result = mysqli_query($db, $sql);
                 while($row = mysqli_fetch_assoc($result)) {
+                    // EXECUTE A POPUP
                     echo ' <div id = "wrapper">
                     <a href="#modalbox"><img src= '.$row['photo'].' alt="'.$row['photo_alt'].'" class="img"></a>
                 </div>
@@ -55,6 +59,7 @@
                     </div>
                 </div>';
                 }
+            // CLOSE CONNECTION
             mysqli_close($db);
         ?>
     <!-- JAVASCRIPT -->

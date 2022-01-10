@@ -8,10 +8,12 @@
     background-color: #111111;
 }
 
+/* NEVERMIND XD */
 body {
   overflow: hidden;
 }
 
+/* PARTICLES-JS */
 #particles-js{
   display: flex;
   width: 100%;
@@ -20,6 +22,7 @@ body {
 	background: no-repeat center center /cover;
 }
 
+/* ANIMATION-CONTAINER */
 #container {
   animation-name: fadeIn;
   animation-delay: 0s;
@@ -27,6 +30,7 @@ body {
   animation-timing-function: ease-out;
 }
 
+/* LOGIN-BOX */
 #login-box{
     width: 500px;
     padding: 40px;
@@ -45,6 +49,7 @@ body {
     background-color: #191919;
   }
 
+  /* INPUT LABELS */
   #login-box input[type = "text"],
   #login-box input[type = "password"]{
     border:0;
@@ -61,6 +66,7 @@ body {
     transition: 0.25s;
   }
 
+  /* LABELS ANIMATIONS */
   #login-box input[type = "text"]:focus,
   #login-box input[type = "password"]:focus{
     width: 280px;
@@ -90,6 +96,7 @@ body {
       color: #111111;
   }
 
+
   #subtext {
     position: fixed;
     margin-top: 68vh;
@@ -108,6 +115,7 @@ body {
     color: #FFF;
   }
   
+  /* FORM LAYOUT */
   #form-layout {
     display: grid;
     grid-template-columns: 20% auto 20%;

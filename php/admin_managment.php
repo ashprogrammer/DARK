@@ -1,5 +1,7 @@
 <?php 
+// SESSION START
 session_start();
+// THANKS TO THIS WE KNOW WHAT ADMIN IS LOGGED IN
 $admin = $_SESSION['admin'];
 error_reporting(0);
 ?>
@@ -9,6 +11,7 @@ error_reporting(0);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- WEBSITE ICON -->
     <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png">
     <!-- CSS LINKS -->
     <link rel="stylesheet" href="../css/animate.css">
@@ -49,6 +52,7 @@ error_reporting(0);
                     <input type="text" name="photo" placeholder="Upload photo">
                     <input type="text" name="photoalt" placeholder="Alternative text for photo">
                     <input type="text" name="desc" placeholder="Description">
+                    <!-- PHP ERRORS WITH FORM -->
                     <p><?php 
                         echo $_SESSION["info"];
                     ?></p>
@@ -56,9 +60,11 @@ error_reporting(0);
                 </form>
                 <a href="#" onclick="togglePersons()">Close</a>
                 <?php
+                // CONNECT TO DATABASE
                 $db = mysqli_connect('localhost', 'root', '', 'dark');
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+                        // VARIABLES
                         $name = $_POST['name'];
                         $lname = $_POST['lastname'];
                         $age = $_POST['age'];
@@ -68,14 +74,9 @@ error_reporting(0);
                      
                     if(empty($name) || empty($lname) || empty($age) || empty($photo) || empty($photoalt) || empty($desc)){
                         $_SESSION["info"] = "All fields required" ;
-                        // $name = $_POST['name'];
-                        // $lname = $_POST['lastname'];
-                        // $age = $_POST['age'];
-                        // $photo = $_POST['photo'];
-                        // $photoalt = $_POST['photoalt'];
-                        // $desc = $_POST['desc'];
                     }
                     else {
+                        // SQL QUERY
                         $query = "INSERT INTO person(name, lastname, age, photo, photo_alt, description, id_admin) VALUES ('$name','$lname','$age','$photo','$photoalt','$desc','$admin')";
 
                         $run = mysqli_query($db, $query);
@@ -98,6 +99,7 @@ error_reporting(0);
                 <input type="text" name="desc" placeholder="Description...">
                 <input type="text" name="photo" placeholder="Upload photo">
                 <input type="text" name="photoalt" placeholder="Alternative text for photo">
+                <!-- PHP ERRORS WITH FORM -->
                 <p><?php 
                         echo $_SESSION["info"];
                     ?></p>
@@ -105,9 +107,11 @@ error_reporting(0);
             </form>
                 <a href="#" onclick="toggleEvents()">Close</a>
                 <?php
+                // CONNECT TO DATABASE
                 $db = mysqli_connect('localhost', 'root', '', 'dark');
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+                        // VARIABLES
                         $event = $_POST['event'];
                         $desc = $_POST['desc'];
                         $photo = $_POST['photo'];
@@ -117,6 +121,7 @@ error_reporting(0);
                         $_SESSION["info"] = "All fields required" ;
                     }
                     else {
+                        // SQL QUERY
                         $query = "INSERT INTO event_age(name, description, photo, photo_alt, id_admin) VALUES ('$event','$desc','$photo','$photoalt','$admin')";
 
                         $run = mysqli_query($db, $query);
@@ -137,6 +142,7 @@ error_reporting(0);
                 <form method="POST" action="">
                 <input type="text" name="year" placeholder="Year">
                 <input type="text" name="desc" placeholder="Description...">
+                <!-- PHP ERRORS WITH FORM -->
                 <p><?php 
                         echo $_SESSION["info"];
                     ?></p>
@@ -144,9 +150,11 @@ error_reporting(0);
                 </form>
                 <a href="#" onclick="toggleYears()">Close</a>
                 <?php
+                // CONNECT TO DATABASE
                 $db = mysqli_connect('localhost', 'root', '', 'dark');
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+                        // VARIABLES
                         $year = $_POST['year'];
                         $desc = $_POST['desc'];
                      
@@ -154,6 +162,7 @@ error_reporting(0);
                         $_SESSION["info"] = "All fields required" ;
                     }
                     else {
+                        // SQL QUERY
                         $query = "INSERT INTO year_season(year_s, description, id_admin) VALUES ('$year','$desc','$admin')";
 
                         $run = mysqli_query($db, $query);
@@ -174,6 +183,7 @@ error_reporting(0);
                 <form method="POST" action="">
                 <input type="text" name="season" placeholder="Season">
                 <input type="text" name="desc" placeholder="Description...">
+                <!-- PHP ERRORS WITH FORM -->
                 <p><?php 
                         echo $_SESSION["info"];
                     ?></p>
@@ -181,9 +191,11 @@ error_reporting(0);
                 </form>
                 <a href="#" onclick="toggleSeasons()">Close</a>
                 <?php
+                // CONNECT TO DATABASE
                 $db = mysqli_connect('localhost', 'root', '', 'dark');
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+                        // VARIABLES
                         $season = $_POST['year'];
                         $desc = $_POST['desc'];
                      
@@ -191,6 +203,7 @@ error_reporting(0);
                         $_SESSION["info"] = "All fields required" ;
                     }
                     else {
+                        // SQL QUERY
                         $query = "INSERT INTO season(season, description, id_admin) VALUES ('$season', '$desc', '$admin')";
 
                         $run = mysqli_query($db, $query);

@@ -56,24 +56,7 @@
                 }
             mysqli_close($db);
         ?>
-       <!-- <div id = "wrapper">
-        <a href="#modalbox"><img src="../img/Persons/bernd1913.jpg" alt="Bernd" class="img"></a>
-    </div>
-    <div id="modalbox" class="modal">
-        <div class="modalcontent">
-            <h1>Name Person</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus asperiores magnam temporibus repellat aliquid, incidunt dolores ratione dolor consequuntur aut?</p>
-            <a href="#" class="modalclose">&times;</a>
-        </div>
-    </div> -->
-    </div>
-    <!-- FOOTER -->
-    <footer id="foot">
-        <audio id="themeMusic">
-            <source src="../music/theme.mp3" type="audio/mp3">
-        </audio>
-    </footer>
-    <!-- JS -->
+    <!-- JAVASCRIPT -->
     <script src="../js/main.js"></script>
 </body>
 </html>

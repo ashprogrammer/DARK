@@ -1,7 +1,10 @@
+// THIS FUNCTION ITS FOR MAKING BLUR BACKGROUND AND MAKING WORKING POPUP
+
 function toggle(){
     var blur = document.getElementById('blur');
     blur.classList.toggle('active');
     var popup = document.getElementById('popup');
+    // ONCLICK SET CLASS ACTIVE
     popup.classList.toggle('active');
 }
 

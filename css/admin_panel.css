@@ -248,3 +248,9 @@ body {
     font-size: 20px;
     transition: 0.5s;
   }
+
+
+  #popup p, #popupPersons p, #popupEvents p, #popupYears p, #popupSeasons p {
+    margin: 30px;
+    color: #FFF;
+  }
